@@ -1,0 +1,54 @@
+<div class="new-post">
+    <form (ngSubmit)="onSubmit()" #annonceForm="ngForm">
+        <div class="form-title">Votre produit</div>
+        <div class="form-group">
+          <label for="titre">Titre</label>
+          <input type="text" class="form-control" id="titre" name="titre" [(ngModel)]="annonce.title" required>
+        </div>
+
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea class="form-control description" id="description" name="description" rows="3" [(ngModel)]="annonce.content" required></textarea>
+          </div>
+
+        <div class="form-group">
+            <label for="image">Image</label>
+            <div class="image-upload-container" (click)="fileInput.click()" (dragover)="onDragOver($event)" (drop)="onDrop($event)">
+                <input type="file" id="image" name="image" #fileInput (change)="onFileSelected($event)">
+                <div class="image-upload-placeholder">
+                    <p *ngIf="!annonce.image">Glisser une image ici ou cliquer pour uploader</p>
+                </div>
+                <img *ngIf="annonce.image" [src]="annonce.image" alt="Aperçu de l'image">
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="prix">Prix (€)</label>
+            <input type="number" class="form-control" id="prix" name="prix" min="0" [(ngModel)]="annonce.price" required>
+        </div>
+
+        <div class="form-title">Vous</div>
+        <div class="form-group">
+          <label for="nomUtilisateur">Nom d'utilisateur</label>
+          <input type="text" class="form-control" id="nomUtilisateur" name="nomUtilisateur" [(ngModel)]="annonce.author" required>
+        </div>
+      
+      
+        <div class="contact">
+            <div class="form-group special-border" >
+                <label for="telephone">Numéro de téléphone</label>
+                <input type="tel" class="form-control" id="telephone" name="telephone" [(ngModel)]="annonce.phoneNumber" required>
+              </div>
+            
+              <div class="form-group special-border email">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" [(ngModel)]="annonce.email" required>
+              </div>
+        </div>
+        
+      
+        <button type="submit" class="btn btn-primary" [class.disabled]="!isFormValid()">Ajouter</button>
+          
+      </form>
+      
+</div>

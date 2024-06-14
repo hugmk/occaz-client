@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
+.header {
+    background-color: rgb(0, 108, 216);
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+        justify-items: center;
+        padding: 0 10%;
+        color: white;
+
+        .app-title {
+            width: 70%;
+            display: flex;
+            justify-content: start;
+            margin-left: 10%;
+            
+            .link-title {
+                font-size: 70px;
+                text-decoration: none;
+                font-family: "Pacifico", cursive;
+                font-weight: 400;
+                font-style: normal;
+                color: white;
+            }
+        }
+
+        .buttons {
+            width: 30%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            font-weight: 400;
+        }
+    }
+}

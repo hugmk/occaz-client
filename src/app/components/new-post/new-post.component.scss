@@ -1,0 +1,143 @@
+.new-post {
+    color: black;
+    padding: 50px 300px;
+
+    // nouvelle-annonce.component.scss
+    .form-title {
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    .form-group {
+        margin-bottom: 20px;
+
+        label {
+            display: block;
+            font-weight: 400;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        textarea {
+            font-family: "Poppins", sans-serif;
+            font-style: normal;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            resize: vertical;
+        }
+
+        textarea {
+            height: 100px;
+        }
+    }
+
+    .btn-primary {
+        margin-top: 30px;
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        background-color: #007bff;
+        border: none;
+        border-radius: 4px;
+        color: white;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #0056b3;
+        }
+
+        &.disabled {
+            background-color: #cccccc;
+            color: #666666;
+            pointer-events: none;
+        }
+    }
+
+    // Styliser l'élément de téléchargement de fichier
+    input[type="file"] {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+    }
+
+    .form-control-file {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: 'Choisir un fichier';
+        display: inline-block;
+        background-color: #007bff;
+        color: white;
+        padding: 8px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    &:hover::before {
+        background-color: #0056b3;
+    }
+    }
+    
+    .image-upload-container {
+        position: relative;
+        border: 2px dashed #ccc;
+        border-radius: 8px;
+        padding: 40px;
+        cursor: pointer;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px; /* Ajuster selon vos besoins */
+    }
+    
+    .image-upload-placeholder {
+        text-align: center;
+    }
+    
+    .image-upload-placeholder p {
+        margin: 0;
+    }
+    
+    .image-upload-container img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .contact {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .special-border {
+            width: 40%;
+
+            input[type="tel"],
+            input[type="email"] {
+                width: 100%;
+                padding: 10px;
+                font-size: 16px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+        }
+
+        .email {
+            width: 50%;
+        }
+    }
+    
+  
+
+}

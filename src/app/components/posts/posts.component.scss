@@ -1,0 +1,90 @@
+.content {
+    color: black;
+    padding: 50px 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .post {
+        height: 170px;
+        border: 2px solid #a5a5a5;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 10px;
+        padding: 30px;
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgba(186, 186, 186, 0.35);
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            height: 100%;
+            width: 100%;
+
+            .image {
+                width: 20%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+            }
+
+            .right {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-left: 30px;
+                width: 80%;
+                height: 100%;
+
+                .infos {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    height: 100%;
+                    
+                    .title {
+                        font-size: 24px;
+                        font-weight: 400;
+                    }
+    
+                    .user {
+                        .author {
+                            margin-top: 10px;
+                            display: flex;
+                            justify-content: start;
+                            align-items: center;
+                            gap: 10px;
+                            font-size: 16px;
+                            margin-bottom: 10px;
+            
+                            .svg {
+                                width: 15px;
+                                filter: invert(76%) sepia(0%) saturate(1%) hue-rotate(195deg) brightness(90%) contrast(87%);
+                            }
+                        }
+    
+                        .date {
+                            font-size: 14px;
+                            font-weight: 300;
+                        }
+                    }                    
+                }
+    
+                .price {
+                    font-size: 22px;
+                    font-weight: 500;
+                    margin-right: 30px;
+                }
+            }
+        }
+    }
+}
