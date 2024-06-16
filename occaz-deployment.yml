@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: occaz-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: occaz-frontend
+  template:
+    metadata:
+      labels:
+        app: occaz-frontend
+    spec:
+      containers:
+        - image: hugmk/occaz-frontend:latest
+          imagePullPolicy: IfNotPresent
+          name: occaz-frontend
+      restartPolicy: Always
